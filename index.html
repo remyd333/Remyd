@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Platform Game</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        #gameContainer {
+            position: relative;
+            width: 1024px;
+            margin: auto;
+        }
+        canvas {
+            display: block;
+            margin: auto;
+            background: url('images/back2.jpg') no-repeat center center; /* Adjust as needed */
+            background-size: cover;
+        }
+        #uiContainer {
+            color: white;
+            text-align: center;
+        }
+        #difficultyButtons {
+            margin-top: 20px;
+        }
+        #difficultyButtons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="uiContainer">
+            <div id="score">Score: 0</div>
+            <div id="lives">Lives: 10</div>
+            <div id="timer">Time: 0</div>
+            <div id="difficulty">Difficulty: Easy</div>
+            <div id="difficultyButtons">
+                <button id="easyButton">Easy</button>
+                <button id="mediumButton">Medium</button>
+                <button id="hardButton">Hard</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
